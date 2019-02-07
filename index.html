@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cache Management System built with Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      function memcached() {
+        $.get( "memcached.php", function(data) {
+          if ( data == "0" ) {
+            alert("Success.");
+          } else {
+            alert("Error. Please check console for details.")
+            console.log(data);
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Cache Management System built with Bulma!
+      </h1>
+      <p style="height:100px"></p>
+      <a class="button is-fullwidth" onclick="memcached();">點擊此處刷新緩存</a>
+    </div>
+  </section>
+  </body>
+</html>
